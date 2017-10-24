@@ -375,6 +375,7 @@ if (typeof Object.create !== 'function') {
                         post.message = (text) ? text : '';
                         post.description = (element.description) ? element.description : '';
                         post.link = (element.link) ? element.link : 'http://facebook.com/' + element.from.id;
+                        post.permalink = post.author_link + '/posts/' + post.id.split('_')[1];
 
                         if (options.show_media === true) {
                             if (element.picture) {
