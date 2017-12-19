@@ -272,6 +272,7 @@ if (typeof Object.create !== 'function') {
                             //prevent a moment.js console warning due to Twitter's poor date format.
                             post.dt_create = moment(element.created_at, 'dd MMM DD HH:mm:ss ZZ YYYY');
                             post.author_link = 'http://twitter.com/' + element.user.screen_name;
+                            post.author_screen_name = '@' + element.user.screen_name;
                             post.author_picture = element.user.profile_image_url_https;
                             post.post_url = post.author_link + '/status/' + element.id_str;
                             post.author_name = element.user.name;
